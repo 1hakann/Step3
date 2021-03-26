@@ -19,6 +19,17 @@ class MainActivity : AppCompatActivity() {
         myBtn.setOnClickListener {
             karisikSec()
         }
+        val resetBtn : Button = findViewById(R.id.btnReset)
+        resetBtn.setOnClickListener {
+            resetImg()
+        }
+    }
+
+    private fun resetImg() {
+        myImg = findViewById(R.id.ivPic)
+        myImg.setImageResource(R.drawable.emptyness)
+
+
     }
 
     private fun karisikSec() {
