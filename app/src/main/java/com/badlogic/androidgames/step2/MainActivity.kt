@@ -1,5 +1,6 @@
 package com.badlogic.androidgames.step2
 
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -7,12 +8,13 @@ import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
 
-
+    lateinit var myImg : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        myImg = findViewById(R.id.ivPic)
         val myBtn : Button = findViewById(R.id.btnAra)
         myBtn.setOnClickListener {
             karisikSec()
@@ -21,7 +23,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun karisikSec() {
         var randomNumber = (1..7).random()
-        val myImg : ImageView = findViewById(R.id.ivPic)
 
         val drawableResource = when(randomNumber) {
             1 -> R.drawable.images_1
